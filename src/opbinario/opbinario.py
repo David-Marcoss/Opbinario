@@ -243,7 +243,7 @@ class opbinario:
         if sobe == 1:
             resul = '1' + resul
 
-        return resul
+        return f'{int(resul)}'
 
 
     @staticmethod
@@ -278,7 +278,7 @@ class opbinario:
         for i in range(1,len(mult)):
             resul = opbinario.somabin(resul,mult[i])
 
-        return resul
+        return f'{int(resul)}'
 
 
     @staticmethod
@@ -344,7 +344,7 @@ class opbinario:
         n1, n2 = opbinario.iguala_bases(n1, n2)
 
         resul = ''
-        for i in range(len(n1)-1,-1,-1):
+        for i in range(0,len(n1)):
             r = '0'
             if n1[i] == '1' and n2[i] == '1':
                 r = '1'
@@ -368,7 +368,7 @@ class opbinario:
         n1, n2 = opbinario.iguala_bases(n1, n2)
 
         resul = ''
-        for i in range(len(n1) - 1, -1, -1):
+        for i in range(0,len(n1)):
             r = '1'
             if n1[i] == '0' and n2[i] == '0':
                 r = '0'
